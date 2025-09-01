@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
 
     socket.on('disconnect', () => {
         console.log('user disconnected');
-        // Ensure typing indicator is cleared for this socket
+        // Ensure the typing indicator is cleared for this socket
         socket.broadcast.emit('stop typing', { id: socket.id });
     })
 })
