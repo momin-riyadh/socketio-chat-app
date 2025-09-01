@@ -160,7 +160,7 @@ function addMessage(payload) {
         // For my messages: content then avatar on the right; align row to end
         // For others: avatar then content on the left
         const bubbleBase = 'max-w-[75%] px-3 py-2 rounded-lg shadow border';
-        const bubbleMine = 'bg-primary-600/30 border-primary-400/30';
+        const bubbleMine = 'bg-pink-600/30 border-primary-400/30';
         const bubbleOther = 'bg-white/10 border-white/10 text-left';
 
         const avatarImg = `<img src="${avatarUrl}" alt="avatar" class="w-8 h-8 rounded-full ring-1 ring-white/20 bg-white/10" loading="lazy">`;
@@ -190,7 +190,7 @@ function addAttachmentMessage(payload) {
     const avatarUrl = `https://api.dicebear.com/8.x/identicon/svg?seed=${seed}`;
 
     const bubbleBase = 'max-w-[75%] px-3 py-2 rounded-lg shadow border';
-    const bubbleMine = 'bg-primary-600/30 border-primary-400/30 text-right';
+    const bubbleMine = 'bg-pink-600/30 border-primary-400/30 text-right';
     const bubbleOther = 'bg-white/10 border-white/10 text-left';
 
     const avatarImg = `<img src="${avatarUrl}" alt="avatar" class="w-8 h-8 rounded-full ring-1 ring-white/20 bg-white/10" loading="lazy">`;

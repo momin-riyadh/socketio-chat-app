@@ -30,3 +30,7 @@ Project Structure
 Notes
 - The server chooses PORT from the PORT env var or defaults to 3000.
 - Static assets are served from the public directory.
+- The Socket.IO client script tag in public/index.html is required for this setup because public/script.js calls io() from the global provided by /socket.io/socket.io.js served by the Node server. If you prefer alternatives:
+  - CDN: <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-Xi3x..." crossorigin="anonymous"></script>
+  - ESM/bundler: import { io } from "socket.io-client" in your build and remove the script tag.
+- If your HTML is served from a different origin/port than the Node server, point the script src to that server, e.g. http://localhost:3000/socket.io/socket.io.js, or pass a URL to io("http://localhost:3000"). See different-origin-chat.md.
