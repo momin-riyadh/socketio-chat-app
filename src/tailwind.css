@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: base styles to ensure font and background work even before classes apply */
+@layer base {
+  html, body { height: 100%; }
+}
